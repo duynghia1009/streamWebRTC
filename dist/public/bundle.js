@@ -1,0 +1,1 @@
+(()=>{var e={745:e=>{e.exports=function(){navigator.mediaDevices.getUserMedia({audio:!1,video:!0}).then((e=>{const t=document.getElementById("localStream");t.srcObject=e,t.onloadedmetadata=function(){t.play()}})).catch((e=>console.log(e)))}}},t={};!function o(a){if(t[a])return t[a].exports;var n=t[a]={exports:{}};return e[a](n,n.exports,o),n.exports}(745)()})();
