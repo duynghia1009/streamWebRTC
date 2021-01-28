@@ -1,12 +1,8 @@
+const playVideo = reuqire('./playVideo')
+
 function openStream() {
     navigator.mediaDevices.getUserMedia({ audio: false, video: true})
-    .then(stream => {
-        const video = document.getElementById('localStream');
-        video.srcObject = stream;
-        video.onloadedmetadata = function () {
-            video.play();
-        };
-    })
+    .then(stream => playVideo(stream, 'localStream'))
     .catch(err => console.log(err));
 }
 
